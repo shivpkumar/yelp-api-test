@@ -1,0 +1,12 @@
+<h4>Search for businesses in SF by search term!</h4>
+
+<form action="/" method="post">
+  <input type="text" name="search[address]" placeholder="address"><br>
+  <input type="hidden" name="search[city]" value="San Francisco">
+  <input type="hidden" name="search[state]" value="CA">
+  <input type="text" name="search[radius]" placeholder="radius"><br>
+  <input type="text" name="search[term]" placeholder="search term"><br>
+  <input type="hidden" name="search[yws_id]" value="<%= ENV['YWSID'] %>">
+  <input type="submit" value="Search">
+</form>
+<div id="all-listings"></div>

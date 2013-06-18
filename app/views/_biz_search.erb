@@ -1,0 +1,13 @@
+<ul>
+<% @businesses.each_with_index do |business, index| %>
+  <li><span><%= index + 1 %>. </span>
+      <a href="/id/<%= business['id'] %>"><%= business['name'] %></a>
+      <span> [</span>
+      <% business['categories'].each do |category| %>
+      <a href="/category/<%= category['category_filter'] %>"><%= category['category_filter'] %></a>
+      <span> - </span>
+      <% end %>
+      <span>]</span>
+  </li>
+<% end %>
+</ul>

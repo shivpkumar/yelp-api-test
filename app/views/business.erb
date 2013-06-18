@@ -1,0 +1,9 @@
+<h3><%= @business['name'] %></h3>
+
+<p>Reviews: <%= @business['review_count'] %></p>
+
+<ul>
+  <% @business['reviews'].each do |review| %>
+  <li>[<%= review['rating'] %>] <%= review['excerpt'] %></li>
+  <% end %>
+</ul>
